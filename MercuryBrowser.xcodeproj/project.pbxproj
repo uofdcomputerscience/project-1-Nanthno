@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		181F02D42346B179000DC45F /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181F02D32346B179000DC45F /* ImageCell.swift */; };
 		46F1B4A4234150FA00DF2896 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F1B4A3234150FA00DF2896 /* AppDelegate.swift */; };
 		46F1B4A6234150FA00DF2896 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F1B4A5234150FA00DF2896 /* SceneDelegate.swift */; };
 		46F1B4A8234150FA00DF2896 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F1B4A7234150FA00DF2896 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		181F02D32346B179000DC45F /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		46F1B4A0234150FA00DF2896 /* MercuryBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MercuryBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F1B4A3234150FA00DF2896 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46F1B4A5234150FA00DF2896 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				46F1B4AC234150FC00DF2896 /* Assets.xcassets */,
 				46F1B4AE234150FC00DF2896 /* LaunchScreen.storyboard */,
 				46F1B4B1234150FC00DF2896 /* Info.plist */,
+				181F02D32346B179000DC45F /* ImageCell.swift */,
 			);
 			path = MercuryBrowser;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46F1B4A8234150FA00DF2896 /* ViewController.swift in Sources */,
+				181F02D42346B179000DC45F /* ImageCell.swift in Sources */,
 				46F1B4A4234150FA00DF2896 /* AppDelegate.swift in Sources */,
 				46F1B4A6234150FA00DF2896 /* SceneDelegate.swift in Sources */,
 			);
