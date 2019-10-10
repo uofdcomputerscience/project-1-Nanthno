@@ -50,13 +50,17 @@ class ImageTools {
     static func fetchImage(url: String, completion: @escaping ((UIImage) -> Void)) {
         if let img = urlToImage[url] {
             completion(img)
+            return
         }
+        
         let session = URLSession(configuration: .ephemeral)
         let task = session.dataTask(with: URL(string: url)!) {
             (data, response, error) in
             if let data = data {
                 if let img = UIImage(data: data) {
+                    print("loading image from web at \(url)")
                     completion(img)
+                    urlToImage[url] = img
                 }
             }
         }
