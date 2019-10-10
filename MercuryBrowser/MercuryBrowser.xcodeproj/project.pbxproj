@@ -13,7 +13,6 @@
 		185A7BEB234BEA1800072D29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185A7BEA234BEA1800072D29 /* Assets.xcassets */; };
 		185A7BEE234BEA1800072D29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185A7BEC234BEA1800072D29 /* LaunchScreen.storyboard */; };
 		185A7BF6234BEB1B00072D29 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185A7BF5234BEB1B00072D29 /* ImageCell.swift */; };
-		185A7BFA234BF01F00072D29 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185A7BF9234BF01F00072D29 /* ImageManager.swift */; };
 		185A7BFC234BF7D100072D29 /* ImageTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185A7BFB234BF7D100072D29 /* ImageTools.swift */; };
 		185A7BFE234BF80400072D29 /* Mercury.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185A7BFD234BF80400072D29 /* Mercury.swift */; };
 /* End PBXBuildFile section */
@@ -27,7 +26,6 @@
 		185A7BED234BEA1800072D29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		185A7BEF234BEA1800072D29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		185A7BF5234BEB1B00072D29 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
-		185A7BF9234BF01F00072D29 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		185A7BFB234BF7D100072D29 /* ImageTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTools.swift; sourceTree = "<group>"; };
 		185A7BFD234BF80400072D29 /* Mercury.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mercury.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,7 +67,6 @@
 				185A7BEC234BEA1800072D29 /* LaunchScreen.storyboard */,
 				185A7BEF234BEA1800072D29 /* Info.plist */,
 				185A7BF5234BEB1B00072D29 /* ImageCell.swift */,
-				185A7BF9234BF01F00072D29 /* ImageManager.swift */,
 				185A7BFB234BF7D100072D29 /* ImageTools.swift */,
 				185A7BFD234BF80400072D29 /* Mercury.swift */,
 			);
@@ -152,7 +149,6 @@
 				185A7BE4234BEA1800072D29 /* AppDelegate.swift in Sources */,
 				185A7BFC234BF7D100072D29 /* ImageTools.swift in Sources */,
 				185A7BF6234BEB1B00072D29 /* ImageCell.swift in Sources */,
-				185A7BFA234BF01F00072D29 /* ImageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +294,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MercuryBrowser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -306,6 +303,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.n4.MercuryBrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -315,7 +313,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MercuryBrowser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -323,6 +322,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.n4.MercuryBrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

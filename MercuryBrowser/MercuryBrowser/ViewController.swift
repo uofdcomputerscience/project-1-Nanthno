@@ -6,10 +6,6 @@
 //  Copyright © 2019 Anthony Hanson. All rights reserved.
 //
 
-/* things needing to be done:
- * make images not scale randomly and weirdly
- * add the other info (probably by adding labels to the table cell)
-*/
 import UIKit
 
 class ViewController: UIViewController {
@@ -21,21 +17,30 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         tableView.dataSource = self
+        ImageTools.loadMercuries(completion: mercuriesLoaded(merc:))
+        
+    }
+    
+    
+    func mercuriesLoaded(merc: [Mercury]) {
+        ImageTools.mercuries = merc
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
         
     }
 }
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ImageManager.mercuryList.count
+        return ImageTools.mercuries.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let mercury = ImageManager.mercuryList[indexPath.item]
-        let image = ImageManager.getImage(imageURL: mercury.url)
+        let mercury = ImageTools.mercuries[indexPath.item]
         let cell = tableView.dequeueReusableCell(withIdentifier: "ImageCell")!
         if let imgCell = cell as? ImageCell {
-            imgCell.imageView!.image = image
+            ImageTools.fetchImage(url: mercury.url, completion: imgCell.setImage(img:))
             imgCell.nameLabel.text = mercury.name
             imgCell.typeLabel.text = mercury.type
         }

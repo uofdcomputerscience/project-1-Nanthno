@@ -14,49 +14,52 @@ class ImageTools {
         let mercury: [Mercury]
     }
     
+    private static var _mercuries: [Mercury] = []
+    
+    static var mercuries: [Mercury] {
+        get {
+            return _mercuries
+        }
+        set {
+            _mercuries = newValue
+        }
+    }
+    
+    static var urlToImage: [String: UIImage] = [:]
+    
     static let mercuryURL = "https://raw.githubusercontent.com/rmirabelli/mercuryserver/master/mercury.json"
     
     
-    static func loadMercuries() -> [Mercury]? {
+    static func loadMercuries(completion: @escaping (([Mercury]) -> Void)) {
         
         print("loading URLs")
         
-        var mercuries: [Mercury]? = nil
-        
         let session = URLSession(configuration: .ephemeral)
-        let semaphore = DispatchSemaphore(value: 0)
         let task = session.dataTask(with: URL(string: mercuryURL)!) {
             (data, response, error) in
             if let data = data {
                 let decoder = JSONDecoder()
                 let mercuryList = try! decoder.decode(MercuryList.self, from: data)
-                mercuries = mercuryList.mercury
+                completion(mercuryList.mercury)
             }
-            semaphore.signal()
         }
         
         task.resume()
-        semaphore.wait() // wait until task is complete
-        
-        return mercuries
-        
     }
     
-    static func loadImageFromURL(imageURL: String) -> UIImage {
-        var img: UIImage? = nil
+    static func fetchImage(url: String, completion: @escaping ((UIImage) -> Void)) {
+        if let img = urlToImage[url] {
+            completion(img)
+        }
         let session = URLSession(configuration: .ephemeral)
-        let semaphore = DispatchSemaphore(value: 0)
-        let task = session.dataTask(with: URL(string: imageURL)!) {
+        let task = session.dataTask(with: URL(string: url)!) {
             (data, response, error) in
             if let data = data {
-                img = UIImage(data: data)
+                if let img = UIImage(data: data) {
+                    completion(img)
+                }
             }
-            semaphore.signal()
         }
         task.resume()
-        semaphore.wait()
-        
-        return img!
     }
 }
-

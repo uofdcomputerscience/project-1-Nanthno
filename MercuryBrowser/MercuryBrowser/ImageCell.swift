@@ -13,4 +13,10 @@ class ImageCell: UITableViewCell {
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var typeLabel: UILabel!
+    
+    func setImage(img: UIImage) {
+        DispatchQueue.main.async {
+            self.imgView.image = img
+        }
+    }
 }

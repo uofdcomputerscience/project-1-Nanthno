@@ -32,7 +32,6 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="500" verticalCompressionResistancePriority="500" translatesAutoresizingMaskIntoConstraints="NO" id="UUg-JN-0dD">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="310.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" priority="800" constant="414" id="FUd-m4-fEz"/>
                                                         <constraint firstAttribute="height" constant="310" id="fAk-Wa-N5l"/>
                                                     </constraints>
                                                 </imageView>
@@ -54,6 +53,7 @@
                                                 <constraint firstItem="2xg-Me-OEh" firstAttribute="leading" secondItem="GZo-xZ-hqs" secondAttribute="leading" constant="20" id="5EI-SL-RME"/>
                                                 <constraint firstAttribute="trailing" secondItem="R6W-9k-hLW" secondAttribute="trailing" constant="20" id="Ajb-6H-vDc"/>
                                                 <constraint firstItem="UUg-JN-0dD" firstAttribute="top" secondItem="GZo-xZ-hqs" secondAttribute="top" id="Jhh-nu-ysw"/>
+                                                <constraint firstItem="R6W-9k-hLW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2xg-Me-OEh" secondAttribute="trailing" constant="50" id="Lxn-6J-kk7"/>
                                                 <constraint firstItem="2xg-Me-OEh" firstAttribute="top" secondItem="UUg-JN-0dD" secondAttribute="bottom" constant="10" id="NQv-vW-Usl"/>
                                                 <constraint firstItem="UUg-JN-0dD" firstAttribute="leading" secondItem="GZo-xZ-hqs" secondAttribute="leading" id="cj6-Sm-jWi"/>
                                                 <constraint firstAttribute="trailing" secondItem="UUg-JN-0dD" secondAttribute="trailing" id="pc5-Nh-wuJ"/>
@@ -61,7 +61,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="imageView" destination="UUg-JN-0dD" id="IIn-ng-dK0"/>
+                                            <outlet property="imgView" destination="UUg-JN-0dD" id="MRU-7X-erB"/>
                                             <outlet property="nameLabel" destination="2xg-Me-OEh" id="6oh-S0-DjK"/>
                                             <outlet property="typeLabel" destination="R6W-9k-hLW" id="ufQ-Tm-H0Q"/>
                                         </connections>
